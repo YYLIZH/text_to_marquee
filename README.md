@@ -1,7 +1,7 @@
 # text_to_marquee
 ## 如何使用 
 1.下載python 3.8 </br>
-2.把程式跟requirements.txt放到同一目的地
+2.把程式跟requirements.txt放到同一目的地 </br>
 3.打開command line </br>
 4.cd 到程式所在的資料夾，輸入 </br>
 ```
@@ -33,7 +33,7 @@ text = "高山一実我老婆"
 ## 使用
 在放程式的資料夾新增一個叫做marquee的資料夾程式碼，運行程式 </br>
 出來的結果會像這樣 </br>
-![1](https://github.com/YYLIZH/text_to_marquee/marquee.png "輸出範例")
+![1](https://github.com/YYLIZH/text_to_marquee/blob/master/marquee.jpg "輸出範例")
 會出現一堆圖片以及做好的gif檔 </br>
 原理是用這堆圖片合出gif檔，可以檢查一下gif取值是否滿意，若不滿意可以在range裡改成想要的圖片編號
 ```python
