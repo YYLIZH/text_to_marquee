@@ -47,3 +47,5 @@ imagelist[0].save('marquee/out.gif', format='GIF',save_all=True, append_images=i
 ```
 Ex.range(81):第0到第80張 range(1,81)：第1到第80張 </br>
 除此之外，save裡duration可以調整每個影格出線的秒數，單位是毫秒
+## 結果
+![2](https://github.com/YYLIZH/text_to_marquee/blob/master/beauty.gif "輸出結果)
