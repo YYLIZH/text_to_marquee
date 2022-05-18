@@ -1,0 +1,8 @@
+numpy
+Pillow
+pydantic
+
+# format
+blacks
+flake8
+autoflake
