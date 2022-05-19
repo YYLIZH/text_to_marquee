@@ -1,9 +1,11 @@
 import json
 import tempfile
 from typing import Optional, Tuple
-
+import os
 from PIL import Image, ImageDraw, ImageFont
 from pydantic import BaseModel, validator
+
+PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 class Text(BaseModel):
@@ -38,8 +40,9 @@ class Config(BaseModel):
 
 
 class MarqueeGenerator:
-    def __init__(self, text: Optional[str] = None) -> None:
-        with open("configs.json", encoding="utf-8") as filep:
+    def __init__(self, text: str, config_path: str) -> None:
+        self.config_path = config_path if config_path else f"{PATH}/static/configs.json"
+        with open(self.config_path) as filep:
             data = json.load(filep)
         if text:
             data["text"]["text"] = text
@@ -100,3 +103,8 @@ class MarqueeGenerator:
         with tempfile.TemporaryDirectory() as tmpdir:
             self.generate_pictures(tmpdir=tmpdir)
             self.concat_pictures()
+
+
+def text_to_marquee(text: str, config_path: str) -> None:
+    generator = MarqueeGenerator(text=text, config_path=config_path)
+    generator.run()
