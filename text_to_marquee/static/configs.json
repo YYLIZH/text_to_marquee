@@ -1,0 +1,12 @@
+{
+  "text": {
+    "color": [255,0,0], 
+    "left_top_location": [100,0],
+    "box_square_width": 100
+  }, 
+  "background": {
+    "width": 920, 
+    "height":100, 
+    "color": [255,255,255]
+  }
+}

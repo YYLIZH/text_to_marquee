@@ -1,0 +1,7 @@
+Pillow
+pydantic
+
+# format
+black
+flake8
+autoflake
