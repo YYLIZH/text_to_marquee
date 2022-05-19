@@ -21,7 +21,9 @@ class Text(BaseModel):
 
     @validator("font", always=True)
     def read_font(cls, value, values):
-        return ImageFont.truetype(value, values["box_square_width"], encoding="utf-8")
+        return ImageFont.truetype(
+            value, values["box_square_width"], encoding="utf-8"
+        )
 
 
 class Background(BaseModel):
@@ -41,7 +43,11 @@ class Config(BaseModel):
 
 class MarqueeGenerator:
     def __init__(self, text: str, config_path: str) -> None:
-        self.config_path = config_path if config_path else f"{PATH}/static/configs.json"
+        self.config_path = (
+            config_path
+            if config_path
+            else f"{PATH}/static/configs.json"
+        )
         with open(self.config_path) as filep:
             data = json.load(filep)
         if text:
